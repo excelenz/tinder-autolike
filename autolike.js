@@ -2,17 +2,6 @@
 function hasBlacklistKeywords(bio) {
 	const blacklist = [
 		'ladyboy',
-		'banci',
-		'bencong',
-		'lady boy',
-		'not a lady',
-		'not lady',
-		'not a girl',
-		'not girl',
-		'trans',
-		'shemale',
-		'chubby',
-		//' lb ',
 	];
 
 	for (item of blacklist) {
@@ -97,11 +86,11 @@ function trickTinder() {
 }
 
 function checkOkCupid() {
-	return window.location.href.startsWith("https://www.okcupid.com/doubletake");
+	return window.location.href.startsWith("https://www.okcupid.com");
 }
 function trickOkCupid() {
 	// Press the like button
-	document.getElementsByClassName('cardactions-action--like')[0].click();
+	document.getElementsByClassName('likes-pill-button doubletake-like-button')[0].click();
 }
 
 // There is a lot more fun that can be achieved
@@ -111,11 +100,11 @@ function trickOkCupid() {
 // TODO: Need to add RNN for fake messages
 
 function getRandomPeriod() {
-	return Math.round(Math.random() * (2000 - 500)) + 500;
+	return Math.round(Math.random() * (9000 - 500)) + 4500;
 }
 
 (function loopSasori() {
-	// A random period between 500ms and 2secs
+
 	let randomPeriod = getRandomPeriod();
 
 	setTimeout(function () {
